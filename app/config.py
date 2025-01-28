@@ -8,12 +8,12 @@ else:
     print("Warning: .env file not found. Using system environment variables.")
 
 # Database Configuration
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:Ram77777%@localhost/tryquiz")
 if not DATABASE_URL:
     raise ValueError("DATABASE_URL is required but not set in environment variables or .env file.")
 
 # Security Configuration
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY", "32X4PTehAUy")
 if not SECRET_KEY:
     raise ValueError("SECRET_KEY is required but not set in environment variables or .env file.")
 
