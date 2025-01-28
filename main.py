@@ -5,7 +5,7 @@ from app.models import Base
 from app.routes import auth, questions
 from fastapi.middleware.cors import CORSMiddleware
 
-# Load environment variables from .env file
+# Load environment variables
 load_dotenv()
 
 # Initialize FastAPI app
@@ -18,15 +18,15 @@ Base.metadata.create_all(bind=engine)
 app.include_router(auth.router)
 app.include_router(questions.router)
 
-@app.get("/")
-def root():
-    return {"message": "Welcome to the FastAPI application!"}
-
-# Add CORS middleware
+# CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Replace with your frontend's URL
+    allow_origins=["*"],  # Update with your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+def root():
+    return {"message": "Welcome to the FastAPI application!"}

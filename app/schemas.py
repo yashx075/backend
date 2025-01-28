@@ -12,7 +12,6 @@ class UserLogin(UserBase):
 
 class UserOut(UserBase):
     id: int
-
     class Config:
         orm_mode = True
 
@@ -24,6 +23,5 @@ class QuestionOut(BaseModel):
     option_c: str
     option_d: str
     correct_answer: int
-
     class Config:
         orm_mode = True
