@@ -35,8 +35,8 @@ Follow these steps to set up and run the backend application:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/wexa-quiz-backend.git
-cd wexa-quiz-backend
+git clone https://github.com/yashx075/backend_wexa.git
+cd backend_wexa
 2. Create a virtual environment and activate it
 python -m venv venv
 source venv/bin/activate  # For Linux/MacOS
@@ -45,11 +45,11 @@ venv\Scripts\activate     # For Windows
 pip install -r requirements.txt
 4. Set up the environment variables
 Create a .env file in the project root and add the following:
-DATABASE_URL=postgresql://username:password@localhost:5432/wexa_quiz
+DATABASE_URL=postgresql://username:password@localhost:5432/database_name
 SECRET_KEY=your-secret-key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
-Replace username, password, and localhost:5432/wexa_quiz with your database credentials.
+Replace username, password, and localhost:5432/database_name with your database credentials.
 Replace your-secret-key with a strong, random secret key.
 5. Run database migrations
 If you're using a migration tool like Alembic, run:
@@ -79,7 +79,7 @@ Testing
 Run the test suite to ensure everything works as expected:
 pytest
 Folder Structure
-wexa-quiz-backend/
+backend_wexa/
 ├── app/
 │   ├── main.py         # Main application entry point
 │   ├── models/         # Database models
