@@ -25,7 +25,7 @@ def root():
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://wexaquiz.vercel.app"],  # Replace with your frontend's URL
+    allow_origins=["*"],  # Replace with your frontend's URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
